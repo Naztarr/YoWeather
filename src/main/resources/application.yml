@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: yoWeather
+
+yoWeather:
+  weatherApi:
+    api-key: ${WEATHER_API_KEY}
+
+server:
+  port: 8005
