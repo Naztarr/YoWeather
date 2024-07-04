@@ -16,7 +16,7 @@ public class WeatherController {
     private final WeatherApiService weatherApiService;
 
     @GetMapping("/hello")
-    public YoWeatherResponse getCurrentWeather(@RequestParam String firstName, HttpServletRequest httpServletRequest){
-        return weatherApiService.getCurrentWeather(firstName, httpServletRequest);
+    public YoWeatherResponse getCurrentWeather(@RequestParam(name = "visitor_name") String visitorName, HttpServletRequest httpServletRequest){
+        return weatherApiService.getCurrentWeather(visitorName, httpServletRequest);
     }
 }

@@ -1,18 +1,19 @@
 package com.naz.yoWeather.payload;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class LocationResponse {
+    @JsonProperty(value = "name")
     private String name;
+    @JsonProperty(value = "region")
     private String region;
+    @JsonProperty(value = "country")
     private String country;
     @JsonProperty(value = "lat")
     private Double latitude;
