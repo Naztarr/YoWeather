@@ -10,12 +10,12 @@ public class SeverPortCustomizer implements WebServerFactoryCustomizer<Configura
     public void customize(ConfigurableServletWebServerFactory factory) {
 
         String port = System.getenv("X_ZOHO_CATALYST_LISTEN_PORT");
-        int listenPort;
+        int portToListen;
         if(port != null && !port.isEmpty()){
-            listenPort = Integer.parseInt(port);
+            portToListen = Integer.parseInt(port);
         } else {
-            listenPort = 9000;
+            portToListen = 9000;
         }
-        factory.setPort(listenPort);
+        factory.setPort(portToListen);
     }
 }
